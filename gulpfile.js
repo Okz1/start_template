@@ -1,7 +1,3 @@
-var gulp = require('gulp');
+var gulp = require('gulp'),
+		sass = require('gulp-sass');
 
-gulp.task('mytask', function(){
-	return gulp.src('source-file')
-	.pipe(plugin())
-	.pipe(gulp.dest('folder'))
-});
