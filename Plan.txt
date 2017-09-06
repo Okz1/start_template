@@ -41,7 +41,8 @@
 28) стоврюємо файл libs.sass // файл в який імпортуємо стилі наших бібліотек
 
 
-29)npm i gulp-cssnano --save-dev // мініфікація css
+29) npm i gulp-cssnano --save-dev // мініфікація css
 30) npm i gulp-rename --save-dev// rename
 
+31) npm i del -save-dev //видалення(очищення) файлів
 

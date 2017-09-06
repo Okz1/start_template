@@ -3,5 +3,9 @@ body {
 
 body {
   color: #fff;
-  background: #000;
-  font-size: 22px; }
+  background: #f32;
+  font-size: 22px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex; }
