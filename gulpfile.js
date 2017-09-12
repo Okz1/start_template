@@ -12,11 +12,19 @@ var gulp  				= require('gulp'),
 		// pngquant		=	require('imagemin-pngquant');// хз чи працює нормально
 
 //описуємо таск сасс 
-gulp.task('sass' , function(){
-	return gulp.src('app/sass/**/*.sass')
-		.pipe(sass())
-		.pipe(autoprefixer(['> 1%', 'ie 8', 'ie 7','last 15 versions'],{ cascade: true}))
-		.pipe(gulp.dest('app/css'))
+// gulp.task('sass' , function(){
+// 	return gulp.src('app/sass/**/*.sass')
+// 		.pipe(sass())
+// 		.pipe(autoprefixer(['> 1%', 'ie 8', 'ie 7','last 15 versions'],{ cascade: true}))
+// 		.pipe(gulp.dest('app/css'))
+// 		.pipe(browserSync.reload({stream: true})) //інжектимо наші стилі
+// });
+//описуємо таск scss
+gulp.task('sass', function(){
+  return gulp.src('app/scss/**/*.scss')
+    .pipe(sass())
+    .pipe(autoprefixer(['> 1%', 'ie 8', 'ie 7','last 15 versions'],{ cascade: true}))
+ 		.pipe(gulp.dest('app/css'))
 		.pipe(browserSync.reload({stream: true})) //інжектимо наші стилі
 });
 
@@ -69,7 +77,7 @@ gulp.task('browser-sync', function(){
 
 //описуємо таск watch який слідкує за зміною в файлах
 gulp.task('watch',['browser-sync', 'sass', 'scripts'], function() { //в квадратних дужках перераховуємо таски, які треба виконати до запуску таску watch, в даному випадку браузер сінк і сасс
-	gulp.watch('app/sass/**/*.sass', ['sass']);
+	gulp.watch('app/scss/**/*.scss', ['sass']);
 	gulp.watch('app/*.html', browserSync.reload); // слідкуємо за змінами в html файлі
 	gulp.watch('app/js/**/*.js', browserSync.reload);	 // слідкуємо за змінами в js файлі
 });

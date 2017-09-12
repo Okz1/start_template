@@ -1,11 +1,5 @@
 body {
-  font-size: 40px; }
-
-body {
-  color: #fff;
-  background: #f32;
-  font-size: 22px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex; }
+  background-color: #000;
+  color: #fff; }
+  body span {
+    color: #f23; }

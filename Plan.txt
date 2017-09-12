@@ -10,8 +10,8 @@
 8) gulp.src('source-file') джерело файла
 9) .pipe() // виклик команди, плагіна 
 10) .pipe(gulp.dest('folder')) //вибираємо папку для вигрузки результатів, dest- шлях
-
-11) npm i gulp-sass --save-dev// встановлення плагіна САСС
+	
+11) npm i gulp-sass --save-dev// встановлення плагіна САСС npm install -g scss-compile  --save-dev
 12) gulp sass// виконуємо такс САСС який описали в gulpfile.js
 13) return gulp.src('app/sass/**/*.sass') // вибираємо всі файли з розширеннням сасс зі всіх піддерикторій
 14) return gulp.src('!app/sass/main.sass') всі файли крім даного буду зкомпільовано
