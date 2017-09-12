@@ -47,10 +47,16 @@
 31) npm i del -save-dev //видалення(очищення) файлів
 
 32) npm i gulp-imagemin --save-dev
-33) npm i gulp-imagemin-pngquant --save-dev
+33) npm i gulp-pngquant --save-dev
 
 34) npm i gulp-autoprefixer --save-dev
 
 
 35) для запуску npm i 
+
+36)gulp watch// для вочінгу
+
+37)gulp clean //для видалення папки діст
+
+38)gulp buid //створення папки діст
 
