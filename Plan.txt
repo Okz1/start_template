@@ -60,3 +60,6 @@
 
 38)gulp buid //створення папки діст
 
+39)npm install --save-dev gulp-notify для виявлення помилок
+40)npm install --save-dev gulp-plumber для виявлення помилок
+

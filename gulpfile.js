@@ -8,6 +8,8 @@ var gulp  				= require('gulp'),
 		autoprefixer 	= require('gulp-autoprefixer'), // автопрефіксер
 		cssnano  			=	require('gulp-cssnano'), // працює
 		rename				=	require('gulp-rename'),
+		plumber      	= require('gulp-plumber'),
+		notify       	= require('gulp-notify'),
 		del						= require('del'), //працює
 		imagemin			= require('gulp-imagemin'),// працює 
 		pngquant			=	require('gulp-pngquant');// працює 
@@ -23,6 +25,14 @@ var gulp  				= require('gulp'),
 //описуємо таск scss
 gulp.task('sass', function(){
   return gulp.src('app/scss/**/*.scss')
+  .pipe(plumber({
+        errorHandler: notify.onError(function (err) {
+            return {
+              title: "SCSS",
+              message: err.message
+            }
+        })
+    }))
     .pipe(sass())
     .pipe(autoprefixer(['> 1%', 'ie 8', 'ie 7','last 15 versions'],{ cascade: true}))
  		.pipe(gulp.dest('app/css'))
